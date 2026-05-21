@@ -1,35 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Periodic Table Trainer</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='32' font-size='32'>⚗</text></svg>" />
-  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Periodic Table Practice</title>
   <link rel="stylesheet" href="style.css" />
-  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://pyscript.net/releases/2024.1.1/core.css"
+  />
+  <script
+    type="module"
+    src="https://pyscript.net/releases/2024.1.1/core.js"
+  >
+  </script>
 </head>
+
 <body>
 
-  <!-- Hamburger button — only visible on mobile (CSS hides it on desktop) -->
+  <!-- Hamburger button — only visible on mobile -->
   <button id="hamburger">☰</button>
 
   <!-- Dim overlay shown behind the sidebar when it is open on mobile -->
   <div id="sidebar-overlay"></div>
 
   <nav id="sidebar">
-    <h2>⚗ Trainer</h2>
-    <!-- Nav links have no onclick — Python wires these up via event listeners -->
-    <a id="nav-quiz"      href="#">Quiz</a>
-    <a id="nav-elements"  href="#">Elements</a>
+    <a id="nav-progress"  href="#">Tracker</a>
+    <a id="nav-quiz"      href="#">Practice</a>
     <a id="nav-reference" href="#">Reference</a>
-    <a id="nav-progress"  href="#">Progress</a>
+    <a id="nav-elements"  href="#">Settings</a>
   </nav>
 
   <main id="content">
 
     <!-- ── PAGE: QUIZ ── -->
-    <div id="page-quiz" class="page">
+    <div id="page-quiz" class="page" style="display:none">
       <h1>Quiz</h1>
 
       <div id="quiz-controls">
@@ -91,7 +97,7 @@
     </div>
 
     <!-- ── PAGE: PROGRESS ── -->
-    <div id="page-progress" class="page" style="display:none">
+    <div id="page-progress" class="page">
       <h1>Progress</h1>
       <p id="progress-rate">No attempts yet.</p>
       <table id="progress-table">
